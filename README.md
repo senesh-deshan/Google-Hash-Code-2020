@@ -7,7 +7,7 @@
 
 ## The solution
 
-Before you read this you must check the [problem statement](Problem/slice.pdf)
+Before you read this you must check the [problem statement](Problem/slice.pdf) first
 
 Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order
 
@@ -110,7 +110,9 @@ So the output file should looks like,
 ```
 
 The final solution implemented in Java can be found [here](Solution/Solution.java)
+
 Input files can be found [here](Input/)
+
 Output files can be found [here](Output/)
 
 
