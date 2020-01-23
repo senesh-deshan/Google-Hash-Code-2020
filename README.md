@@ -19,7 +19,8 @@ Input Text
 2 5 6 8
 ```
 17 = the maximum number of Pizza slices to order
-4  = the number of diffrent types of Pizzas
+
+4  = the number of different types of Pizzas
 
 Since there are 4 Pizzas the indexes of the pizzas are 0,1,2,3 respectively
 
