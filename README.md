@@ -1,4 +1,4 @@
-# Google Hash Code 2020 | version 2.0
+# Google Hash Code 2020 | version 1.1
 [version 1.0](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/master)
 
 [version 1.1](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/v1)
