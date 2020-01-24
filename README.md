@@ -5,6 +5,7 @@
 
 [version 2.0](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/v2)
 
+
 ## More Pizza 🍕
 ### Solution for the Practice Round of Google Hash Code 2020 - Score: 1,505,004,318
 
