@@ -17,7 +17,19 @@ This is just a simple solution with a simple logic which was written to inspire 
 
 Before you read this you must check the [problem statement](Problem/slice.pdf) first
 
-Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order
+Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order. In updated version, after each completion repeats the same procedure with a skipping the last element of the input array. In this way leads to trying more different combinations for each problem.
+
+```
+main loop {  // Used to decrese the size of the currently considering array
+
+  sub loop {  // Used to find the solution using currently considering array
+  
+    }
+
+}
+```
+
+Lets take a look at the basic solution which is done inside the sub loop,
 
 Example:
 
@@ -117,6 +129,20 @@ So the output file should looks like,
 3
 0 2 3
 ```
+
+The above solution was found with considering all the 4 input values (all 2,5,6,8). In the next iteration of the main loop considers about only 3 values (only 2,5,6) by skipping the last one(8). The procedure is same as the previous but the only difference is the number of values to consider.
+
+Then it gives the solution
+
+```
+6 + 5 + 2 = 13
+```
+
+But this is not better than the previous solution which was 16. Therefore skip the last value once again and repeat the procedure again.
+
+Likewise this procedure needs to be repeated until there is no values to be considered.
+
+
 
 The final solution implemented in Java can be found [here](Solution/Solution.java)
 
