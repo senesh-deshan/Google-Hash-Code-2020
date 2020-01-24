@@ -26,6 +26,8 @@ class Solution {
     static int NUM;
     static ArrayList<Integer> inputList;
     static ArrayList<Integer> outputList;
+    static String inputFilesDirectory = "../Input/";
+    static String outputFilesDirectory = "../Output/";
 
     public static void main(String[] args) throws IOException {
 
@@ -84,7 +86,7 @@ class Solution {
         System.out.println("-----------------------");
 
         // Read the input file by name
-        BufferedReader fr = new BufferedReader(new FileReader(fileName + ".in"));
+        BufferedReader fr = new BufferedReader(new FileReader(inputFilesDirectory + fileName + ".in"));
 
         String line, firstLine;
         firstLine = fr.readLine();
@@ -123,7 +125,7 @@ class Solution {
         System.out.println("OUTPUT");
 
         // Create output file.
-        try (PrintWriter output = new PrintWriter(fileName + ".out", "UTF-8")) {
+        try (PrintWriter output = new PrintWriter(outputFilesDirectory + fileName + ".out", "UTF-8")) {
             output.println(outputList.size());
             System.out.println(outputList.size());
             for (Integer outputLine : outputList) {
