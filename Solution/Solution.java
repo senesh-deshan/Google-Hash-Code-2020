@@ -26,13 +26,12 @@ class Solution {
     static int NUM;
     static ArrayList<Integer> inputList;
     static ArrayList<Integer> outputList;
-    static String inputFilesDirectory = "../Input/";
-    static String outputFilesDirectory = "../Output/";
+    static String inputFilesDirectory = "../Input/"; // Location of input files
+    static String outputFilesDirectory = "../Output/"; // Location of output files
 
     public static void main(String[] args) throws IOException {
 
         // Begin solving
-
         String[] fileNames = { "a_example", "b_small", "c_medium", "d_quite_big", "e_also_big" }; // File names list
 
         for (String fileName : fileNames) { // Take every file and solve
@@ -45,35 +44,59 @@ class Solution {
 
     public static ArrayList<Integer> solve(Integer MAX, ArrayList<Integer> inputList) {
 
-        Integer sum = 0;
+        ArrayList<Integer> solutionList = new ArrayList<Integer>(); // List to store the best solution
 
-        ArrayList<Integer> currentList = new ArrayList<Integer>(); // List to store the solution
+        Integer fullSize = inputList.size();
+        Integer i;
+        Integer j;
+        Integer maxScore = 0;
 
-        Integer size = inputList.size();
-        Integer i = size - 1;
+        // Decrease the traversable size of the initial Pizza array in reverse order, by
+        // 1 in each iteration
+        for (j = fullSize - 1; j >= 0; j--) {
 
-        // Traverse the Pizza array in reverse order
-        for (i = size - 1; i >= 0; i--) {
+            Integer size = j;
+            // Integer previousValue = 0;
+            Integer sum = 0;
+            ArrayList<Integer> currentList = new ArrayList<Integer>(); // List to store the solution at each iteration
+                                                                       // of the loop
 
-            // Store the sum temporarily
-            Integer tempSum = sum + inputList.get(i);
+            // Traverse the current Pizza array in reverse order
+            for (i = size; i >= 0; i--) {
 
-            if (tempSum == MAX) { // If the temporary sum is equal to target
-                sum = tempSum;
-                currentList.add(i); // Add current Pizza index to the solution
-                return currentList; // Return results
+                Integer currentValue = inputList.get(i);
 
-            } else if (tempSum > MAX) { // If the temporary sum is greter than target
-                continue; // Try next value
+                // Store the sum temporarily
+                Integer tempSum = sum + currentValue;
 
-            } else if (tempSum < MAX) { // If the temporary sum is lesser than target
-                sum = tempSum;
-                currentList.add(i); // Add current Pizza index to the solution
-                continue; // Try next value
+                if (tempSum == MAX) { // If the temporary sum is equal to target
+                    sum = tempSum;
+                    currentList.add(i); // Add current Pizza index to the solution
+                    break; // Go to return solution
+
+                } else if (tempSum > MAX) { // If the temporary sum is greter than target
+                    continue; // Try next value
+
+                } else if (tempSum < MAX) { // If the temporary sum is lesser than target
+                    sum = tempSum;
+                    currentList.add(i); // Add current Pizza index to the solution
+                    continue; // Try next value
+                }
+            }
+
+            if (maxScore < sum) { // If current solution is the best
+                maxScore = sum; // Keep its value
+                solutionList = currentList; // Keep the solution
             }
         }
 
-        return currentList; // Return results
+        // Print the score of the best solution (AKA the maximum number of slices)
+        System.out.println("");
+        System.out.println("");
+        System.out.print("SCORE = ");
+        System.out.println(maxScore);
+
+        return solutionList; // Return best solution
     }
 
     public static void process(String fileName) throws IOException {
@@ -108,7 +131,7 @@ class Solution {
 
         fr.close();
 
-        // Print input data.
+        // Print input data
 
         System.out.println("INPUT");
         System.out.println(MAX + " " + NUM);
@@ -124,7 +147,7 @@ class Solution {
         System.out.println("");
         System.out.println("OUTPUT");
 
-        // Create output file.
+        // Print output data and create output file
         try (PrintWriter output = new PrintWriter(outputFilesDirectory + fileName + ".out", "UTF-8")) {
             output.println(outputList.size());
             System.out.println(outputList.size());
@@ -133,5 +156,7 @@ class Solution {
                 System.out.print(outputLine + " ");
             }
         }
+
+        System.out.println("");
     }
 }
