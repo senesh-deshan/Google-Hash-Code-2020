@@ -7,13 +7,16 @@
 
 ## The solution
 
+> This code is not the perfect solution and it can be optimized and bugs fixed in the future.
+This is just a simple solution with a simple logic which was written to inspire people and give them a start. There may be so many better solutions for this problem.
+
 Before you read this you must check the [problem statement](Problem/slice.pdf) first
 
 Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order
 
 Example:
 
-Input Text
+Input text
 ```
 17 4
 2 5 6 8
