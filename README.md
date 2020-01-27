@@ -14,21 +14,21 @@
 
 ## The solution
 
-> This code is not the perfect solution and it can be optimized and bugs fixed in the future.
-This is just a simple solution with a simple logic which was written to inspire people and give them a start. There may be so many better solutions for this problem.
+> This code gives perfect score but the code is not the perfect and it can be optimized and bugs fixed in the future.
+This is just a one of the best solutions which was written to inspire people and give them a start. There may be several better solutions for this problem.
 
 Before you read this you must check the [problem statement](Problem/slice.pdf) first
 
-Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order. In updated version, after each completion repeats the same procedure with a skipping the last element of the input array. In this way leads to trying more different combinations for each problem.
+Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order. In latest updated version, after each completion repeats the same procedure with a skipping the elemnt before the lastly considered element of the input array. This way leads to approaches considering more different combinations for each problem and gives the perfect solution.
 
 ```
-main loop {  // Used to decrese the size of the currently considering array
-
-  sub loop {  // Used to find the solution using currently considering array
-  
-    }
-
-}
+main loop - - - - - - \             // Main loop is used to decrese the size of the currently considering range of input array
+|                      \
+|  sub loop - - - \     |           // Sub loop is used to find the solution using currently considering range of input array
+|  |               |    |
+|   \ _ _ _ _ _ _ /     |
+|                      /
+ \ _ _ _ _ _ _ _ _ _  /
 ```
 
 Lets take a look at the basic solution which is done inside the sub loop,
@@ -123,30 +123,30 @@ Total is 16. But 16 < 17. Therefore,
 
 But there are no values remaining so the loop ends
 
-By traversing through the Pizza list, the index numbers of the Pizzas that need to be order are 0, 2, 3.
+By traversing through the Pizza list, the index numbers of the Pizzas that need to be order are 3, 2, 0.
 
 So the output file should looks like,
 
 ```
 3
-0 2 3
+3 2 0
 ```
 
-The above solution was found with considering all the 4 input values (all 2,5,6,8). In the next iteration of the main loop considers about only 3 values (only 2,5,6) by skipping the last one(8). The procedure is same as the previous but the only difference is the number of values to consider.
+The above solution was found with considering all the 4 input values from end to start without an initial solution. In order to move to next iteration last 2 values of the solution are subtracted from the sum, and the index of the element before the last element of solution is assigned as the starting index of the next iteration. So in the next iteration of the main loop considers about only 2 values (only 2 and 5) by skipping the last 2 vales (6 and 8). The procedure is same as the previous but the only difference is the number of values to consider.
 
 Then it gives the solution
 
 ```
-6 + 5 + 2 = 13
+8 + 5 + 2 = 15
 ```
 
 But this is not better than the previous solution which was 16. Therefore skip the last value once again and repeat the procedure again.
 
 Likewise this procedure needs to be repeated until there is no values to be considered.
+Thereafter the solution with the highest score is taken as the best solution and will be written in to the output file.
 
 
-
-The final solution implemented in Java can be found [here](Solution/Solution.java)
+The final solution implemented in Python can be found [here](Solution/Solution.py)
 
 Input files can be found [here](Input/)
 
