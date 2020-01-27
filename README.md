@@ -1,12 +1,14 @@
-# Google Hash Code 2020 | version 2.0
-[version 1.0](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/master)
+# Google Hash Code 2020 | version 3.0
+[version 1.0](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/master) in Java
 
-[version 1.1](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/v1)
+[version 1.1](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/v1) in Java
+ 
+[version 2.0](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/v2) in Java
 
-[version 2.0](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/v2)
+[version 3.0](https://github.com/senesh-deshan/Google-Hash-Code-2020/tree/v3) in Python
 
 ## More Pizza 🍕
-### Solution for the Practice Round of Google Hash Code 2020 - Score: 1,505,004,542
+### Solution for the Practice Round of Google Hash Code 2020 - Score: 1,505,004,616
 
 <img src="Images/More Pizza.jpg">
 
