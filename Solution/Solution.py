@@ -74,20 +74,12 @@ def solve(MAX, inputList):
         if(len(currentValueList) != 0):
             lastVal = currentValueList.pop() # Remove the last element from current values
             sum = sum - lastVal # Subtract it from sum
-        
-        if(len(currentValueList) != 0):
-            lastVal = currentValueList.pop() # Remove the last element from current values (Technically it is the element before the last element)
-            sum = sum - lastVal # Subtract it from sum
 
         if(len(currentIndexList) != 0):
             lastIndex = currentIndexList.pop() # Remove the last element from current indexes
             startIndex = lastIndex # Make it as the starting index for the next iteration
 
-        if(len(currentIndexList) != 0):
-            lastIndex = currentIndexList.pop() # Remove the element before the last element from current indexes (Technically it is the element before the last element)
-            startIndex = lastIndex # Make it as the starting index for the next iteration
-
-        if(startIndex == 0): # If solution generating is almost finished
+        if(len(currentIndexList) == 0 and (startIndex == 0)): # If solution generating is almost finished
             break # Stop solution generating
 
     print("SCORE = " + str(maxScore))     # Print the score of the best solution
@@ -145,7 +137,7 @@ def process(fileName):
 inputFilesDirectory = "Input/"  # Location of input files
 outputFilesDirectory = "Output/"  # Location of output files
 
-fileNames = ["a_example", "b_small", "c_medium",
+fileNames = ["test","a_example", "b_small", "c_medium",
              "d_quite_big", "e_also_big"]  # File names
 
 for fileName in fileNames:  # Take each and every file and solve
