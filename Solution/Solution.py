@@ -71,16 +71,24 @@ def solve(MAX, inputList):
         if (maxScore == MAX):  # If current solution is the perfect solution
             break # Stop solution generating
 
-        if(len(currentIndexList) == 1): # If solution generating is almost finished
+        if(len(currentValueList) != 0):
+            lastVal = currentValueList.pop() # Remove the last element from current values
+            sum = sum - lastVal # Subtract it from sum
+        
+        if(len(currentValueList) != 0):
+            lastVal = currentValueList.pop() # Remove the last element from current values (Technically it is the element before the last element)
+            sum = sum - lastVal # Subtract it from sum
+
+        if(len(currentIndexList) != 0):
+            lastIndex = currentIndexList.pop() # Remove the last element from current indexes
+            startIndex = lastIndex # Make it as the starting index for the next iteration
+
+        if(len(currentIndexList) != 0):
+            lastIndex = currentIndexList.pop() # Remove the element before the last element from current indexes (Technically it is the element before the last element)
+            startIndex = lastIndex # Make it as the starting index for the next iteration
+
+        if(startIndex == 0): # If solution generating is almost finished
             break # Stop solution generating
-
-        val1 = currentValueList.pop() # Remove the last element from current values
-        val2 = currentValueList.pop() # Remove the element before the last element from current values
-        sum = sum - (val1 + val2) # Subtract those from sum
-
-        index1 = currentIndexList.pop() # Remove the last element from current indexes
-        index2 = currentIndexList.pop() # Remove the element before the last element from current indexes
-        startIndex = index2 # Make it as the starting index for the next iteration
 
     print("SCORE = " + str(maxScore))     # Print the score of the best solution
 
