@@ -137,7 +137,7 @@ def process(fileName):
 inputFilesDirectory = "Input/"  # Location of input files
 outputFilesDirectory = "Output/"  # Location of output files
 
-fileNames = ["test","a_example", "b_small", "c_medium",
+fileNames = ["a_example", "b_small", "c_medium",
              "d_quite_big", "e_also_big"]  # File names
 
 for fileName in fileNames:  # Take each and every file and solve
