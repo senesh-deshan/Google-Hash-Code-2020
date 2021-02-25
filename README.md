@@ -19,7 +19,7 @@ This is just a one of the best solutions which was written to inspire people and
 
 Before you read this you must check the [problem statement](Problem/slice.pdf) first
 
-Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order. In latest updated version, after each completion repeats the same procedure with a skipping the elemnt before the lastly considered element of the input array. This way leads to approaches considering more different combinations for each problem and gives the perfect solution.
+Simply the algorithm is about adding up the number of slices of the given Pizzas in reverse order. In latest updated version, after each completion repeats the same procedure with a skipping the element before the lastly considered element of the input array. This way leads to approaches considering more different combinations for each problem and gives the perfect solution.
 
 ```
 main loop - - - - - - \             // Main loop is used to decrese the size of the currently considering range of input array
