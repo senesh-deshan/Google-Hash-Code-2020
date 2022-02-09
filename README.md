@@ -132,7 +132,7 @@ So the output file should looks like,
 3 2 0
 ```
 
-The above solution was found with considering all the 4 input values from end to start without an initial solution. In order to move to next iteration last 2 values of the solution are subtracted from the sum, and the index of the element before the last element of solution is assigned as the starting index of the next iteration. So in the next iteration of the main loop considers about only 2 values (only 2 and 5) by skipping the last 2 vales (6 and 8). The procedure is same as the previous but the only difference is the number of values to consider.
+The above solution was found with considering all the 4 input values from end to start without an initial solution. In order to move to next iteration last 2 values of the solution are subtracted from the sum, and the index of the element before the last element of solution is assigned as the starting index of the next iteration. So in the next iteration of the main loop considers about only 2 values (only 2 and 5) by skipping the last 2 values (6 and 8). The procedure is same as the previous but the only difference is the number of values to consider.
 
 Then it gives the solution
 
